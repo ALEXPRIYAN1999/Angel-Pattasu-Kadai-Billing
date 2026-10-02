@@ -1,0 +1,24 @@
+ANGEL PATTASU KADAI - Corrected Online Integration
+
+Files:
+1. Code.gs       -> replace the existing Apps Script Code.gs
+2. index.html    -> replace the existing Apps Script index.html
+3. angel_billing_complete_FINAL_online_estimates.py -> desktop app with Online Estimates integration
+
+Changes:
+- Restored product images from Google Sheet Column H (Image Link).
+- Google Drive image links are converted to browser thumbnail URLs.
+- Online estimate numbers now use ANGON-00001, ANGON-00002, ...
+- Online estimate numbering uses a separate ANGON_BILL_NUMBER counter.
+- Online Estimates -> Google Sheet -> Desktop New Bill integration remains included.
+- Existing PDF/email flow remains included.
+
+Apps Script deployment:
+- Deploy -> Manage deployments -> edit active Web app
+- Select new version
+- Execute as: Me
+- Who has access: Anyone
+- Deploy
+
+Desktop app:
+- Rebuild PyInstaller using the included Python file before creating the Inno Setup installer.
